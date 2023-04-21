@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  acServer:
+    image: ubuntu:20.04
+    container_name: acServer
+    ports:
+      - 9600:9600
+      - 8081:8081
+    volumes:
+      - '.:/acServer'
+    command: sh -c 'sleep 1000000000000 && cd /acServer && ./acServer'
